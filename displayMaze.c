@@ -1,6 +1,6 @@
 #include "maze.h"
 
-// Åã¥Ü°g®c
+// é¡¯ç¤ºè¿·å®®
 void displayMaze() {
 #ifdef _WIN32
     system("cls");
