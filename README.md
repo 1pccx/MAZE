@@ -47,7 +47,7 @@ Very easy，我阿嬤都會
 7. writeElapsedTime（） - 副函式
    - 寫入每次遊戲結束經過的時間到文件中
 # **流程圖**
-
+![遊戲流程](https://github.com/1pccx/EYYYYY/blob/main/%E9%81%8A%E6%88%B2%E6%B5%81%E7%A8%8B.png)
 # **技術使用說明**
 1. 流程圖 ➔ Ch1
 2. 善用註解說明 ➔ Ch1
