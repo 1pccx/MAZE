@@ -1,6 +1,6 @@
 #include "maze.h"
 
-// ²¾°Êª±®a
+// ç§»å‹•çŽ©å®¶
 void movePlayer(char direction) 
 {
     switch (direction) 
