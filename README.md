@@ -24,6 +24,10 @@ Very easy，我阿嬤都會
 - ' ＃ '：牆壁
 - 空格：通道
 
+# **執行畫面**
+[Windows](https://youtu.be/ux8I6lFOFGY)
+[Linux](https://youtu.be/C-y0cTTNfZ4)
+
 # **程式結構圖**
 1. maze.h - 標頭檔
    - 判斷作業系統
