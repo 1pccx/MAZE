@@ -71,7 +71,7 @@ Very easy，我阿嬤都會
 20. typedef 型別名稱定義 ➔ Ch9
 21. 開檔(fopen)、存取檔案內容、關檔(fclose) ➔ Ch10
 22. #ifdef、#elif、#endif 指示詞
-23. 在 Linux 下獲取鍵盤按鍵的函式(tcgetattr、tcsetattr)
+23. Linux 函式(tcgetattr、tcsetattr)
 # **心得**
 剛開始的時候，我真的是對這門課毫無頭緒，但透過不斷地摸索、學習，到現在終於能夠理解一些基本概念，並嘗試動手寫一個小專題。雖然這過程耗費了大量的時間，但看到自己的成果時，真的很有成就感。
 
