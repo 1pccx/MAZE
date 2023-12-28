@@ -26,6 +26,7 @@ Very easy，我阿嬤都會
 
 # **執行畫面**
 [Windows](https://youtu.be/ux8I6lFOFGY)
+
 [Linux](https://youtu.be/C-y0cTTNfZ4)
 
 # **程式結構圖**
