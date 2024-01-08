@@ -1,7 +1,7 @@
-﻿#include <stdbool.h>
-#include "maze.h"
+#include <stdbool.h>  
+#include "maze.h"     
 
-// 顯示迷宮
+// 顯示迷宮函數
 void displayMaze() 
 {
 #ifdef _WIN32
@@ -16,11 +16,11 @@ void displayMaze()
         {
             if (i == playerRow && j == playerCol) 
             {
-                printf("@ ");
+                printf("@ ");  // 如果當前位置是玩家位置，顯示玩家符號
             }
             else if (maze[i][j] == 1)
             {
-                printf("# ");
+                printf("# ");  // 如果當前位置是障礙物，顯示障礙物符號
             }
             else
             {
@@ -31,7 +31,7 @@ void displayMaze()
                 {
                     if (i == exitPoint.row && j == exitPoint.col)
                     {
-                        printf("! ");
+                        printf("! ");  // 如果當前位置是出口，顯示出口符號
                         Exit = true;
                         break;
                     }
