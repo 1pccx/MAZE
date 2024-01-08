@@ -1,29 +1,30 @@
 #define ROWS 20
 #define COLS 20
 
-#ifdef _WIN32  // §PÂ_§@·~¨t²Î
+#ifdef _WIN32  // åˆ¤æ–·ä½œæ¥­ç³»çµ±
 #include <conio.h>  // Windows
-#elif defined __linux__  // §PÂ_§@·~¨t²Î
+#elif defined __linux__  // åˆ¤æ–·ä½œæ¥­ç³»çµ±
 #include <termios.h>   // Linux
 #include <unistd.h>   // Linux
 
-// ¦b Linux ¤UÀò¨úÁä½L«öÁäªº¨ç¦¡
+// åœ¨ Linux ä¸‹ç²å–éµç›¤æŒ‰éµçš„å‡½å¼
 char getKeyPress() 
 {
     struct termios oldt, newt;
     char ch;
-    tcgetattr(STDIN_FILENO, &oldt);  //¥Î©óÀò¨ú¼Ğ·Ç¿é¤J¬yªº²×ºİÄİ©Ê¡A¨Ã±N¨ä«O¦s¨ì oldt ¤¤
+    tcgetattr(STDIN_FILENO, &oldt);  //ç”¨æ–¼ç²å–æ¨™æº–è¼¸å…¥æµçš„çµ‚ç«¯å±¬æ€§ï¼Œä¸¦å°‡å…¶ä¿å­˜åˆ° oldt ä¸­
     newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);  //Ãö³¬¤F²×ºİªº¼Ğ·Ç¿é¤J¼Ò¦¡ (ICANON) ©M¦^Åã¿é¤J (ECHO)
-    tcsetattr(STDIN_FILENO, TCSANOW, &newt);  //¥Î©ó³]¸m¼Ğ·Ç¿é¤J¬yªº²×ºİÄİ©Ê¡A¨Ã¨Ï¥Î TCSANOW °Ñ¼Æªí¥Ü¥ß§Y¥Í®Ä
+    newt.c_lflag &= ~(ICANON | ECHO);  //é—œé–‰äº†çµ‚ç«¯çš„æ¨™æº–è¼¸å…¥æ¨¡å¼ (ICANON) å’Œå›é¡¯è¼¸å…¥ (ECHO)
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);  //ç”¨æ–¼è¨­ç½®æ¨™æº–è¼¸å…¥æµçš„çµ‚ç«¯å±¬æ€§ï¼Œä¸¦ä½¿ç”¨ TCSANOW åƒæ•¸è¡¨ç¤ºç«‹å³ç”Ÿæ•ˆ
     ch = getchar();
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);  //«ì´_¨ì¤§«e«O¦sªº oldt ªº­È¡A¥HÁÙ­ì­ì©lªº²×ºİÄİ©Ê
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);  //æ¢å¾©åˆ°ä¹‹å‰ä¿å­˜çš„ oldt çš„å€¼ï¼Œä»¥é‚„åŸåŸå§‹çš„çµ‚ç«¯å±¬æ€§
     return ch;
 }
 #else
-#error "Unsupported platform"  // ¦pªG¤£¤ä´©ªº¥­¥x¶i¤J³o­Ó°Ï¶ô¡A½sÄ¶¾¹·|³ø¿ù
+#error "Unsupported platform"  // å¦‚æœä¸æ”¯æ´çš„å¹³å°é€²å…¥é€™å€‹å€å¡Šï¼Œç·¨è­¯å™¨æœƒå ±éŒ¯
 #endif
 
+// å®šç¾©çµæ§‹é«”è¡¨ç¤ºè¿·å®®çš„å‡ºå£åº§æ¨™
 typedef struct 
 {
     int row;
@@ -38,7 +39,7 @@ void generateExits();
 void movePlayer();
 void writeElapsedTime();
 
-//¥~³¡ÅÜ¼Æ«Å§i
+//å¤–éƒ¨è®Šæ•¸å®£å‘Š
 extern int maze[ROWS][COLS];
 extern int playerRow;
 extern int playerCol;
