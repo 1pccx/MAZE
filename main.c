@@ -22,7 +22,7 @@ int main(void)
 {
     char move;
     bool gameOver = false;
-    time_t startTime, endTime;
+    time_t startTime, endTime;  //time_t：一種用來表示時間的數據類型。它通常用來存儲從某個特定時刻開始的秒數，可用來記錄程序的開始和結束時間
     double elapsedTime;
     double bestTime = -1; // 初始值為 -1，表示還沒有最佳時間
    
@@ -79,10 +79,10 @@ int main(void)
         if (gameOver)
         {
             endTime = time(NULL);
-            elapsedTime = difftime(endTime, startTime);
+            elapsedTime = difftime(endTime, startTime);  //計算兩個時間點之間的時間差
             printf("恭喜你找到出口!\n");
             printf("遊戲時間: %5.2f 秒\n", elapsedTime);
-            writeElapsedTime(elapsedTime, i);
+            writeElapsedTime(elapsedTime, i); 
             if (bestTime == -1 || elapsedTime < bestTime)
             {
                 bestTime = elapsedTime;
